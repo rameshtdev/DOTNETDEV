@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AspNetWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace AspNetWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            if (!IsPostBack)
             {
                 string[] country = { "USA", "Canada", "Mexico", "Brazil" };
                 foreach(var c in country)
@@ -19,17 +21,41 @@ namespace AspNetWeb
                     ddlCountry.Items.Add(new ListItem(c));
                 }                
             }
-            else
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            string tech = string.Empty;
+            string qual = string.Empty;
+
+            foreach (ListItem item in chkTech.Items)
             {
-                string FirstName = txtFirstName.Text;
-                string LastName = txtLastName.Text;
-                string Email = txtEmail.Text;
-                string HireDate = txtHireDate.Text;
-                int Gender = Convert.ToInt32(rbtnGenderList.SelectedValue);
-                string country = ddlCountry.SelectedValue;
-                //string tech = chkTech.SelectedValue;
-                string qualification = lstQualification.SelectedValue;
+                if(item.Selected)
+                {
+                    tech+=item.Text+"|";
+                }
             }
+            foreach (ListItem item in lstQualification.Items)
+            {
+                if (item.Selected)
+                {
+                    qual += item.Text + "|";
+                }
+            }
+
+            var inputModel = new Assessment() {
+                firstname = txtFirstName.Text,
+                lastname =txtLastName.Text,
+                email = txtEmail.Text,
+                hiredate = Convert.ToDateTime(txtHireDate.Text),
+                gender = Convert.ToInt32(rbtnGenderList.SelectedValue),
+                country = ddlCountry.SelectedValue,
+                technologies = tech,
+                qualification = qual
+            };
+
+            var data = new DataAccess.AssessmentData();
+            data.SaveAssessment(inputModel);
         }
     }
 }

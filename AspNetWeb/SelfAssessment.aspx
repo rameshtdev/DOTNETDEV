@@ -5,6 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+      $("#txtHireDate").datepicker();
+  } );
+  </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -15,30 +24,26 @@
             <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
             </td><td>
                 <asp:TextBox ID="txtFirstName" runat="server"></asp:TextBox>
-            </td></tr>
-         <tr><td>
-            <asp:Label ID="lblHireDate" runat="server" Text="HireDate"></asp:Label>
-            </td><td>
-                <asp:TextBox ID="txtHireDate" runat="server"></asp:TextBox>
-                 <asp:Calendar ID="Calendar1" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px">
-                     <DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" />
-                     <NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
-                     <OtherMonthDayStyle ForeColor="#CC9966" />
-                     <SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
-                     <SelectorStyle BackColor="#FFCC66" />
-                     <TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
-                     <TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
-                 </asp:Calendar>
-            </td></tr>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Firstname is Required" ControlToValidate="txtFirstName">*</asp:RequiredFieldValidator>
+            </td></tr>         
         <tr><td>
             <asp:Label ID="lblLastName" runat="server" Text="Last name"></asp:Label>
             </td><td>
                 <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Last name is Required" ControlToValidate="txtLastName">*</asp:RequiredFieldValidator>
+            </td></tr>
+        <tr><td>
+            <asp:Label ID="lblHireDate" runat="server" Text="HireDate"></asp:Label>
+            </td><td>
+                <asp:TextBox ID="txtHireDate" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="HireDate is Required" ControlToValidate="txtHireDate">*</asp:RequiredFieldValidator>
             </td></tr>
         <tr><td>
             <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
             </td><td>
                 <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Email is Required" ControlToValidate="txtEmail">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
             </td></tr>
         <tr><td>
             <asp:Label ID="lblGender" runat="server" Text="Gender"></asp:Label>
@@ -69,14 +74,17 @@
         <tr><td>
             <asp:Label ID="lblQualification" runat="server" Text="Qualification"></asp:Label>
             </td><td>
-                <asp:ListBox ID="lstQualification" runat="server" Width="109px">
+                <asp:ListBox ID="lstQualification" runat="server" Width="109px" SelectionMode="Multiple">
                     <asp:ListItem>Bachelor in Engineering</asp:ListItem>
                     <asp:ListItem>Masters in Engineering</asp:ListItem>
                     <asp:ListItem>Existing work experience</asp:ListItem>
                 </asp:ListBox>
             </td></tr>
         <tr><td colspan="2">
-            <asp:Button ID="btnSave" runat="server" Text="Save" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td></tr>
+        <tr><td colspan="2">
+            <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </td></tr>
     </table>
     </div>
