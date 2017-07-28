@@ -19,8 +19,7 @@
     <form id="form1" runat="server">
     <div>
     <table>
-        <tr><td colspan="2"><B style="background-color: #00FFFF">Self Assessment<asp:Label ID="Label1" runat="server" Text="Test title"></asp:Label>
-            </B></td></tr>
+        <tr><td colspan="2"><B style="background-color: #00FFFF">Self Assessment</B></td></tr>
         <tr><td>
             <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
             </td><td>
