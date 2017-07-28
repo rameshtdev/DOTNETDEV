@@ -52,6 +52,7 @@
                     <asp:ListItem Value="1">Male</asp:ListItem>
                     <asp:ListItem Value="0">Female</asp:ListItem>
                 </asp:RadioButtonList>
+                <asp:Label ID="Label1" runat="server" Text="Test Label"></asp:Label>
             </td></tr>
         <tr><td>
             <asp:Label ID="lblCountry" runat="server" Text="Country of Birth"></asp:Label>
