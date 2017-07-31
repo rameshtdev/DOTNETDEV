@@ -65,6 +65,7 @@ namespace AspNetWeb
             var data = new DataAccess.AssessmentData();
             data.SaveAssessment(inputModel);
             BindDataGrid();
+            
         }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
