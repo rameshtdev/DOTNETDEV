@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SelfAssessment.aspx.cs" Inherits="AspNetWeb.SelfAssessment" %>
-
+<!--<%@ OutputCache Duration="60" VaryByParam="none"  %>-->
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -88,7 +88,7 @@
             <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </td></tr>
         <tr><td colspan="2">
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="50" OnPageIndexChanging="GridView1_PageIndexChanging">
             </asp:GridView>
             </td></tr>
     </table>

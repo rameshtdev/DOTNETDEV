@@ -72,5 +72,28 @@ namespace AspNetWeb.DataAccess
             }
             return returnList;
         }
+
+        public DataTable GetAssessmentsTable()
+        {
+            // DataTable dt = new DataTable();
+            //dt.Columns.Add(new Date)
+            //Save to DB
+
+            DataSet ds = new DataSet();
+
+            using (var con = new SqlConnection(connString))
+            {
+                con.Open();
+
+                using (var cmd = new SqlCommand())
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter("GetAssessments", con);
+                    adapter.Fill(ds);                  
+                }
+                //A.AssessmentId, A.FirstName, A.LastName, A.HireDate, A.EMail, A.Gender, A.Country, T.Qualifications,T.Technologies
+                con.Close();
+            }
+            return ds.Tables[0];
+        }
     }
 }

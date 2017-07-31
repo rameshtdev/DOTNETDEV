@@ -26,7 +26,7 @@ namespace AspNetWeb
         }
         private void BindDataGrid()
         {
-            var AssessmentList = (new AssessmentData()).GetAssessments();
+            var AssessmentList = (new AssessmentData()).GetAssessmentsTable();
             GridView1.DataSource = AssessmentList;
             GridView1.DataBind();
         }
@@ -71,7 +71,7 @@ namespace AspNetWeb
         {
 
             GridView1.PageIndex = e.NewPageIndex;
-            var AssessmentList = (new AssessmentData()).GetAssessments();
+            var AssessmentList = (new AssessmentData()).GetAssessmentsTable();
             GridView1.DataSource = AssessmentList;
             GridView1.DataBind();
 
