@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
     <div>
     <table>
-        <tr><td colspan="2"><B style="background-color: #00FFFF">Self Assessment</B></td></tr>
+        <tr><td colspan="2"><B style="background-color: #FF00FF">Self Assessment Form</B></td></tr>
         <tr><td>
             <asp:Label ID="lblFirstName" runat="server" Text="First Name"></asp:Label>
             </td><td>
@@ -52,7 +52,6 @@
                     <asp:ListItem Value="1">Male</asp:ListItem>
                     <asp:ListItem Value="0">Female</asp:ListItem>
                 </asp:RadioButtonList>
-                <asp:Label ID="Label1" runat="server" Text="Test Label"></asp:Label>
             </td></tr>
         <tr><td>
             <asp:Label ID="lblCountry" runat="server" Text="Country of Birth"></asp:Label>
