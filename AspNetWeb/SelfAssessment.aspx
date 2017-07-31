@@ -88,7 +88,7 @@
             <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
             </td></tr>
         <tr><td colspan="2">
-            <asp:GridView ID="GridView1" runat="server">
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="true" PageSize="5" OnPageIndexChanging="GridView1_PageIndexChanging">
             </asp:GridView>
             </td></tr>
     </table>

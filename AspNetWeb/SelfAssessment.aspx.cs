@@ -66,5 +66,15 @@ namespace AspNetWeb
             data.SaveAssessment(inputModel);
             BindDataGrid();
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+
+            GridView1.PageIndex = e.NewPageIndex;
+            var AssessmentList = (new AssessmentData()).GetAssessments();
+            GridView1.DataSource = AssessmentList;
+            GridView1.DataBind();
+
+        }
     }
 }
