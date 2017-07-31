@@ -84,8 +84,13 @@
         <tr><td colspan="2">
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
             </td></tr>
+        
         <tr><td colspan="2">
             <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+            </td></tr>
+        <tr><td colspan="2">
+            <asp:GridView ID="GridView1" runat="server">
+            </asp:GridView>
             </td></tr>
     </table>
     </div>

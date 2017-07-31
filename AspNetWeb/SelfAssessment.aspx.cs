@@ -1,4 +1,5 @@
-﻿using AspNetWeb.Models;
+﻿using AspNetWeb.DataAccess;
+using AspNetWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,13 @@ namespace AspNetWeb
                     ddlCountry.Items.Add(new ListItem(c));
                 }                
             }
+            BindDataGrid();
+        }
+        private void BindDataGrid()
+        {
+            var AssessmentList = (new AssessmentData()).GetAssessments();
+            GridView1.DataSource = AssessmentList;
+            GridView1.DataBind();
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
@@ -56,6 +64,7 @@ namespace AspNetWeb
 
             var data = new DataAccess.AssessmentData();
             data.SaveAssessment(inputModel);
+            BindDataGrid();
         }
     }
 }
