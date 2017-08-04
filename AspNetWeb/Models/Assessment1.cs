@@ -5,7 +5,7 @@ using System.Web;
 
 namespace AspNetWeb.Models
 {
-    public class Assessment
+    public class Assessment1
     {
         public string firstname { get; set; }
         public string lastname { get; set; }

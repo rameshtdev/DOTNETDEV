@@ -6,13 +6,14 @@ using System.Linq;
 using System.Web;
 using System.Data;
 using System.Data.SqlClient;
+using AspNetWeb.EntityFramework;
 
 namespace AspNetWeb.DataAccess
 {
     public class AssessmentData
     {
         private string connString = Convert.ToString(ConfigurationManager.AppSettings["ConnectionString"]);
-        public void SaveAssessment(Assessment inputModel)
+        public void SaveAssessment(Assessment1 inputModel)
         {
             //Save to DB
             using (var con = new SqlConnection(connString))
@@ -38,9 +39,29 @@ namespace AspNetWeb.DataAccess
                 con.Close();
             }
         }
-        public List<Assessment> GetAssessments()
+
+        public void SaveAssessmentEF(Assessment1 inputModel)
         {
-            var returnList= new List<Assessment>();
+            using (var context = new sampleDBEntities1())
+            {
+                var assessment = new Assessment()
+                {
+                    FirstName = inputModel.firstname,
+                    LastName = inputModel.lastname,
+                    Email = inputModel.email,
+                    Country = inputModel.country,
+                    Gender = inputModel.gender,
+                    HireDate = inputModel.hiredate
+                };
+                context.Assessments.Add(assessment);
+                context.SaveChanges();
+            }
+                 
+        }
+
+        public List<Assessment1> GetAssessments()
+        {
+            var returnList= new List<Assessment1>();
             //Save to DB
             using (var con = new SqlConnection(connString))
             {
@@ -55,7 +76,7 @@ namespace AspNetWeb.DataAccess
                     var reader = cmd.ExecuteReader();
                     while(reader.Read())
                     {
-                        returnList.Add(new Assessment() {
+                        returnList.Add(new Assessment1() {
                             firstname = Convert.ToString(reader["FirstName"]),
                             lastname = Convert.ToString(reader["LastName"]),
                             hiredate = Convert.ToDateTime(reader["HireDate"]),

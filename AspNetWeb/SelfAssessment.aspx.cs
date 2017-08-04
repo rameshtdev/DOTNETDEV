@@ -51,7 +51,7 @@ namespace AspNetWeb
                 }
             }
 
-            var inputModel = new Assessment() {
+            var inputModel = new Assessment1() {
                 firstname = txtFirstName.Text,
                 lastname =txtLastName.Text,
                 email = txtEmail.Text,
@@ -63,7 +63,8 @@ namespace AspNetWeb
             };
 
             var data = new DataAccess.AssessmentData();
-            data.SaveAssessment(inputModel);
+            //data.SaveAssessment(inputModel);
+            data.SaveAssessmentEF(inputModel);
             BindDataGrid();
             
         }
