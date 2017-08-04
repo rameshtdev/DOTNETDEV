@@ -19,6 +19,15 @@ namespace CodeFirst
         public virtual ICollection<Enrollment> enrollments { get; set; }
     }
 
+    public class Address
+    {
+        public int AddressId { get; set; }
+        public int StudentId { get; set; }
+        public string Street { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
+    }
+
     public class Enrollment
     {
         public int EnrollmentId { get; set; }

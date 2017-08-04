@@ -17,6 +17,14 @@ namespace CodeFirst
                 context.SaveChanges();
             }
             Console.ReadKey();
+
+            /*
+             (1) Enable-Migrations
+            (2) Add-Migration Version_Name -ConnectionString "data source=.\sqlexpress;initial catalog=codefirstDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" -ConnectionProviderName "System.Data.SqlClient" -Verbose
+
+            (3) Update-Database -ConnectionString "data source=.\sqlexpress;initial catalog=codefirstDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework" -ConnectionProviderName "System.Data.SqlClient" -Verbose
+
+             */
         }
     }
 }
