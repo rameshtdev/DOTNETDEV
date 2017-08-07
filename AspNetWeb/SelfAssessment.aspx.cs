@@ -43,6 +43,8 @@ namespace AspNetWeb
                     tech+=item.Text+"|";
                 }
             }
+            int lastindextech = tech.LastIndexOf("|");//to remove last |
+            tech = tech.Remove(lastindextech);
             foreach (ListItem item in lstQualification.Items)
             {
                 if (item.Selected)
@@ -50,6 +52,8 @@ namespace AspNetWeb
                     qual += item.Text + "|";
                 }
             }
+            int lastindexqual = qual.LastIndexOf("|");
+            qual = qual.Remove(lastindexqual);
 
             var inputModel = new Assessment1() {
                 firstname = txtFirstName.Text,
