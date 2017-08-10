@@ -250,6 +250,7 @@
     <Content Include="Views\User\HelloWorld.cshtml" />
     <Content Include="Views\Assessment\AddAssessmentComplete.cshtml" />
     <Content Include="Views\Assessment\AddAssessment.cshtml" />
+    <Content Include="Views\Assessment\GetAssessments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,6 +15,31 @@ namespace MVCApp.Controllers
         {
             return View();
         }
+        [Route("list")]
+        public ActionResult GetAssessments()
+        {
+            var list = new List<Assessment>() {
+                new Assessment()
+                {
+                    firstname ="Scott",
+                    lastname ="Morgan",
+                    hiredate =new DateTime(2015,3,4),
+                    IAgree =true,
+                    email ="Scott@marlabs.com"
+                },
+            new Assessment()
+            {
+                firstname = "John",
+                lastname = "Test",
+                hiredate = new DateTime(2013, 1, 1),
+                IAgree = true,
+                email = "John@marlabs.com"
+            }
+            };
+            return View(list);
+        }
+
+
         [Route("Add")]
         public ActionResult AddAssessment()
         {
