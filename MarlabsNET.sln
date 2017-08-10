@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQOtherExamples", "LINQOtherExamples\LINQOtherExamples.csproj", "{CCF7D2D3-9B5E-4780-93AC-5C387D2F27B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApp", "MVCApp\MVCApp.csproj", "{1B7EDF21-0756-4197-B023-3099022AA179}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CCF7D2D3-9B5E-4780-93AC-5C387D2F27B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCF7D2D3-9B5E-4780-93AC-5C387D2F27B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCF7D2D3-9B5E-4780-93AC-5C387D2F27B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7EDF21-0756-4197-B023-3099022AA179}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7EDF21-0756-4197-B023-3099022AA179}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7EDF21-0756-4197-B023-3099022AA179}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7EDF21-0756-4197-B023-3099022AA179}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
