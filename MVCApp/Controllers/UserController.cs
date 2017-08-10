@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace MVCApp.Controllers
 {
+    [RoutePrefix("Employee/a")]
     public class UserController : Controller
     {
         // GET: User
@@ -15,9 +16,14 @@ namespace MVCApp.Controllers
         }
 
         // GET: User
-        public ActionResult HelloWorld()
+        [Route("Begin/HelloWorld/{id}/{id1}")]
+        [Route("Hello/{id=0}/{id1=0}")]
+        public ActionResult HelloWorld(int id,int id1)
         {
+            
             return View();
         }
+
+        
     }
 }
