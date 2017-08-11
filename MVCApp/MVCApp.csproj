@@ -171,6 +171,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
@@ -251,6 +252,8 @@
     <Content Include="Views\Assessment\AddAssessmentComplete.cshtml" />
     <Content Include="Views\Assessment\AddAssessment.cshtml" />
     <Content Include="Views\Assessment\GetAssessments.cshtml" />
+    <Content Include="Views\Assessment\EditAssessment.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

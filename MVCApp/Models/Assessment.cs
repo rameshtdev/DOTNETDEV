@@ -8,6 +8,7 @@ namespace MVCApp.Models
 {
     public class Assessment
     {
+        public int id { get; set; }
         [Required]
         [Display(Name ="First Name")]
         public string firstname { get; set; }

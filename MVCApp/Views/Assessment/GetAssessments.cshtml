@@ -4,6 +4,7 @@
     ViewBag.Title = "GetAssessments";
 }
 
+
 <h2>GetAssessments</h2>
 
 <p>
@@ -47,7 +48,7 @@
             @Html.DisplayFor(modelItem => item.IAgree)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Edit", "Edit", new {  id=item.id }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>

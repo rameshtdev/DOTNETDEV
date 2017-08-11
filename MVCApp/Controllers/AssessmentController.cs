@@ -10,17 +10,10 @@ namespace MVCApp.Controllers
     [RoutePrefix("Assessment")]
     public class AssessmentController : Controller
     {
-        // GET: Assessment
-        public ActionResult Index()
-        {
-            return View();
-        }
-        [Route("list")]
-        public ActionResult GetAssessments()
-        {
-            var list = new List<Assessment>() {
+        public List<Assessment> list = new List<Assessment>() {
                 new Assessment()
                 {
+                    id=1,
                     firstname ="Scott",
                     lastname ="Morgan",
                     hiredate =new DateTime(2015,3,4),
@@ -29,6 +22,7 @@ namespace MVCApp.Controllers
                 },
             new Assessment()
             {
+                id=2,
                 firstname = "John",
                 lastname = "Test",
                 hiredate = new DateTime(2013, 1, 1),
@@ -36,7 +30,24 @@ namespace MVCApp.Controllers
                 email = "John@marlabs.com"
             }
             };
+
+        // GET: Assessment
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [Route("list")]
+        [LogActionFilter]
+        public ActionResult GetAssessments()
+        {
             return View(list);
+        }
+
+        [Route("Edit/{id}")]
+        public ActionResult EditAssessment(int id)
+        {
+            var assessment = list.Where(w => w.id == id).FirstOrDefault();
+            return View(assessment);
         }
 
 
@@ -54,6 +65,13 @@ namespace MVCApp.Controllers
             if(ModelState.IsValid)
             {
                 ViewBag.Message = "Saved Successfully !!";
+                ViewData["abc"] = "something";
+                TempData["key1"] = "test";
+
+                var abc = TempData["key1"];
+                TempData.Keep("key1");
+
+               // var abc = TempData.Peek("key1");
             }
             else
             {
