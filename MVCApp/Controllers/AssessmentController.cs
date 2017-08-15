@@ -54,8 +54,18 @@ namespace MVCApp.Controllers
         [Route("Add")]
         public ActionResult AddAssessment()
         {
-
-            return View();
+            var countries = new List<Country>()
+            {
+                new Country() {name="USA" },
+                new Country() {name="Canada" },
+                new Country() {name="Mexico" },
+                new Country() {name="Japan" },
+                new Country() {name="Brazil" },
+                new Country() {name="India" },
+                new Country() {name="China" }
+            };
+            Assessment obj = new Assessment() { countries = countries };
+            return View(obj);
         }
 
         [HttpPost]
