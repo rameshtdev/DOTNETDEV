@@ -6,7 +6,7 @@
 
 
 <h2>GetAssessments</h2>
-
+<script src="~/Scripts/Assessment.js"></script>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -49,8 +49,8 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new {  id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Details", "GetAssessments", new { /* id=item.PrimaryKey */ }, new { onclick = "javascript:GetAssessment();" })
+            @Html.ActionLink("Delete", "GetAssessments", new { },new { onclick="javascript:DeleteAssessment();"})
         </td>
     </tr>
 }

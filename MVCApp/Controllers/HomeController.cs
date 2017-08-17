@@ -10,6 +10,12 @@ namespace MVCApp.Controllers
     {
         public ActionResult Index()
         {
+            /*
+             * wsdl /language:c# /out:c:\OrderStatus.cs http://localhost:49303/GetOrderStatus.asmx?WSDL
+             */
+            GetOrderStatus order = new GetOrderStatus();
+            var obj = order.GetStatus(4);
+            Response.Write(obj.CurrentStatus);
             return View();
         }
 
