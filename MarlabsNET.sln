@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApp", "MVCApp\MVCApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFExample", "WCFExample\WCFExample.csproj", "{632C4E9B-971D-4FAD-B290-8EE3BE318270}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleLibrary", "SampleLibrary\SampleLibrary.csproj", "{5B5897CF-5CC0-47BF-B34D-AD5D76026A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUnitTest.csproj", "{FCCB1741-539E-45C0-B3A4-60ACD0FF759D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{632C4E9B-971D-4FAD-B290-8EE3BE318270}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{632C4E9B-971D-4FAD-B290-8EE3BE318270}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{632C4E9B-971D-4FAD-B290-8EE3BE318270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B5897CF-5CC0-47BF-B34D-AD5D76026A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5897CF-5CC0-47BF-B34D-AD5D76026A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5897CF-5CC0-47BF-B34D-AD5D76026A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5897CF-5CC0-47BF-B34D-AD5D76026A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCB1741-539E-45C0-B3A4-60ACD0FF759D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCB1741-539E-45C0-B3A4-60ACD0FF759D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCB1741-539E-45C0-B3A4-60ACD0FF759D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCB1741-539E-45C0-B3A4-60ACD0FF759D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
