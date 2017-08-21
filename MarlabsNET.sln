@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTest", "NUnitTest\NUni
 EndProject
 Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "SampleSSIS", "SampleSSIS\SampleSSIS.dtproj", "{8793583F-4695-456B-8861-70583238AD10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileApp", "FileApp\FileApp.csproj", "{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,12 @@ Global
 		{8793583F-4695-456B-8861-70583238AD10}.Development|Any CPU.Build.0 = Development
 		{8793583F-4695-456B-8861-70583238AD10}.Release|Any CPU.ActiveCfg = Development
 		{8793583F-4695-456B-8861-70583238AD10}.Release|Any CPU.Build.0 = Development
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770E5D0E-A9DA-4A55-93F8-8C42ECDAF30C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
